@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            margin-top: 40px;
+        }
+
+        .filler{
+            text-align: center;
+            padding: 20px;
+             background-color: bisque;
+             margin-bottom: 40px;
+             background-image: url(https://i.pinimg.com/736x/eb/b6/71/ebb6714af14d500c73ffa9ede2e47197.jpg);
+             color: aliceblue;
+             border-radius: 12px;
+             width: 90%;
+             margin-left: 60px;
+            }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .category {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 4px 8px 10px rgba(184, 65, 208, 0.2);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .category img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+        }
+        
+        .category img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(185, 104, 228, 0.3);
+            border-radius: 50%;
+        }
+
+        .category h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .category img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .links {
+            display: none;
+            margin-top: 10px;
+            padding-left: 15px;
+            text-align: left;
+        }
+        .links a {
+            display: block;
+            color: #0073e6;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        footer {
+        background-color: #d2b7e5;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        border-radius: 12px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer a {
+        color: #d65ee3;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="filler">
+        <h1>Freelancing websites</h1>
+    </div>
+    <div class="container">
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://static.vecteezy.com/system/resources/previews/021/270/044/non_2x/data-entry-icon-style-free-vector.jpg" alt="IT Icon">
+            <h3>Data entry & Admin</h3>
+            <div class="links">
+                <a href="https://www.freelancer.in/jobs/infographic-and-powerpoint-slide-designing/">Infographics & PPT</a>
+                <a href="https://www.freelancer.in/jobs/data-processing/">Data Processing</a>
+                <a href="https://www.freelancer.in/jobs/excel/">Exel</a>
+                <a href="https://www.freelancer.in/jobs/customer-support/">Customer Support Jobs</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq_sMGXk5TsEBxYXfeDRNZxgxmNsy4KPxlsg&s" alt="AI Icon">
+            <h3>Writing & Content</h3>
+            <div class="links">
+                <a href="https://www.freelancer.in/jobs/content-creation/">Content creation</a>
+                <a href="https://www.freelancer.in/jobs/articles/">Article Writing</a>
+                <a href="https://www.freelancer.in/jobs/creative-writing/">Creative Writing</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://cdn-icons-png.flaticon.com/256/12035/12035074.png" alt="Design Icon">
+            <h3>Design, Media & Architecture</h3>
+            <div class="links">
+                <a href="#">Graphic Design</a>
+                <a href="#">Logo Design</a>
+                <a href="#">Photoshop</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://cdn-icons-png.flaticon.com/512/8759/8759392.png" alt="Engineering Icon">
+            <h3>Websites,IT & Software</h3>
+            <div class="links">
+                <a href="#">AutoCAD</a>
+                <a href="#">Electronics</a>
+                <a href="#">Electrical Engineering</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-sales-marketing-line-icon-vector-png-image_6738523.png" alt="Marketing Icon">
+            <h3>Sales & Marketing</h3>
+            <div class="links">
+                <a href="#">Internet Marketing</a>
+                <a href="#">Social Media Marketing</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://cdn-icons-png.flaticon.com/512/1924/1924735.png" alt="Business Icon">
+            <h3>Business & Accounting</h3>
+            <div class="links">
+                <a href="#">Finance</a>
+                <a href="#">Legal</a>
+                <a href="#">Project Management</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://static.vecteezy.com/system/resources/previews/026/729/210/non_2x/language-translation-language-switching-silhouette-icon-vector.jpg" alt="Language Icon">
+            <h3>Translation & Languages</h3>
+            <div class="links">
+                <a href="#">English Translation</a>
+                <a href="#">Spanish Translation</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://icons.veryicon.com/png/o/business/my-library/education-12.png" alt="Education Icon">
+            <h3>Education</h3>
+            <div class="links">
+                <a href="#">Tutoring</a>
+                <a href="#">Coaching</a>
+            </div>
+        </div>
+        <div class="category" onclick="toggleLinks(this)">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgDxHqbhc3DXVXK1bLxYH1bzWtwoQ8DcnUyQ&s" alt="Language Icon">
+            <h3>Telecommunications</h3>
+            <div class="links">
+                <a href="#">English Translation</a>
+                <a href="#">Spanish Translation</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Freelancing Websites | <a href="main.html">Back to Main Page</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleLinks(category) {
+            const links = category.querySelector('.links');
+            links.style.display = links.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

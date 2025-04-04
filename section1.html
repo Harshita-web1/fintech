@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Section</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            /* background: url(https://i.pinimg.com/736x/fe/ae/ab/feaeab6a52f987ab7cbe12cb24782cfb.jpg); */
+            background-size: cover;
+        }
+
+        .store-section {
+            text-align: center;
+            padding: 50px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .store-main {
+            padding: 22px;
+            background: linear-gradient(to bottom, #ffe0e6, #f1adb9);
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 8px grey;
+            width: 100%;
+        }
+
+        .store-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: white;
+            color: #fb0086;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background 0.3s;
+        }
+
+        .store-btn:hover {
+            background: #f4f4f4;
+        }
+
+        .store-details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px #ff74b2;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to bottom, #ffedd8, #ffe0e6);
+            font-size: 24px;
+            font-family: -webkit-body;
+        }
+
+        .running-banner {
+            width: 100%;
+            height: 60px;
+            background: #ffcddf;
+            color: #ede0d4;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+        }
+
+        .running-banner span {
+            display: inline-block;
+            padding-left: 100%;
+            position: absolute;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Menu Cards */
+        .menu-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px #ff74b2;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-card img {
+            width: 100%;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .menu-card h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .menu-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1{
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <section id="section1" class="store-section">
+        <div class="store-main">
+            <div class="store-content">
+                <h1>Start Your Own Store</h1>
+                <h2>Join our platform and launch your own store with ease.</h2>
+                <button id="toggleBtn" class="store-btn">Get Started</button>  
+            </div>
+            <img src="store-removebg-preview.png" alt="storefront">
+        </div>
+    
+        <div id="storeDetails" class="store-details">
+            <h2>Why Open a Store with Us?</h2>
+            <ul>
+                <li>✔ Easy Setup & Customization</li>
+                <li>✔ Secure Payment System</li>
+                <li>✔ 24/7 Customer Support</li>
+            </ul>
+        </div>
+
+        <div class="running-banner">
+            <span>Explore Other Stores &nbsp; | &nbsp; Discover New Opportunities &nbsp; | &nbsp; Join Us Today!</span>
+        </div>
+    </section>
+
+    
+    <section class="menu-section">
+        <div class="menu-card">
+            <img src="https://www.shutterstock.com/shutterstock/photos/770940736/display_1500/stock-photo-amsterdam-december-interior-of-a-small-bakery-shop-with-a-rack-full-of-different-types-of-770940736.jpg" alt="Menu Item 1">
+            <h3>Fresh Bakery</h3>
+            <p>Delicious breads and pastries baked fresh every day.</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://www.shutterstock.com/image-photo/african-american-woman-tailor-smiling-600nw-2291569069.jpg" alt="Menu Item 2">
+            <h3> Clothes&co </h3>
+            <p>Tailoring your favorite styles right from home!.</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://media.timeout.com/images/105630160/image.jpg" alt="Menu Item 3">
+            <h3>Pottery</h3>
+            <p>Handmade hapopiness for your home decor!</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://content3.jdmagicbox.com/v2/comp/nagpur/l7/0712px712.x712.230310104623.h6l7/catalogue/maa-ki-rasoi-tiffin-services-mahal-nagpur-tiffin-services-fm58ld2w6z.jpg" alt="Menu Item 4">
+            <h3>Tiffin Service</h3>
+            <p>Providing delicious home cooked food away from home</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/12/372127735/WZ/RI/CH/2611065/home-tuition-tutor-500x500.jpeg" alt="Menu Item 5">
+            <h3>Home Tuition</h3>
+            <p>Teaching 1st to 8th graders all subjects! </p>
+        </div>
+        <div class="menu-card">
+            <img src="https://www.theresascrochetshop.com/cdn/shop/files/3B6ED788-013D-47B8-B1F7-3C0E970AA10B_2048x.jpg?v=1736350245" alt="Menu Item 6">
+            <h3>Crochet Shop</h3>
+            <p>long lasting stuff toys and more for your home!</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://media.istockphoto.com/id/640933402/photo/adjusting-parts-of-earring.jpg?s=612x612&w=0&k=20&c=pmgvv53F-1scl5tq9DtlDviRcBlf9fgfdxkUUMN_7Rw=" alt="Menu Item 6">
+            <h3>Jewelry Shop</h3>
+            <p>Showcasing unique and beautiful jewelry designs for you </p>
+        </div>
+        <div class="menu-card">
+            <img src="https://i0.wp.com/www.thedailymba.com/wp-content/uploads/2022/07/AdobeStock_372349108.jpeg?resize=1024%2C683&ssl=1" alt="Menu Item 6">
+            <h3>Clothing Store</h3>
+            <p>Unique fashion available to all right from home!</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://uschamber-co.imgix.net/https%3A%2F%2Fs3.us-east-1.amazonaws.com%2Fco-assets%2Fassets%2Fimages%2FHome-Baking-Business-ideas.jpg?auto=compress%2Cformat&crop=focalpoint&fit=crop&fp-x=0.5023&fp-y=0.2441&h=415&q=88&w=622&s=fc8b7020ddddbea708915b035f27789c" alt="Menu Item 6">
+            <h3>Home bakery</h3>
+            <p>Delicious bread buns and more freshly made and delivered!</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://i0.wp.com/www.naaree.com/wp-content/uploads/2020/08/food-truck-business.jpg?ssl=1" alt="Menu Item 6">
+            <h3>Food outlet!</h3>
+            <p>Nutritious and tasty snacks for every occasion.</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-kgcsdMLsIXMHUAcUIWnwkjBnOICNqzKn3g&s" alt="Menu Item 6">
+            <h3>Bakery Co</h3>
+            <p>Cakes pastries and more available for special occasions</p>
+        </div>
+        <div class="menu-card">
+            <img src="https://media.gettyimages.com/id/1403487285/photo/craft-woman-making-epoxy-jewlery-at-ther-workshop.jpg?s=612x612&w=gi&k=20&c=TwabK-vvICxaZDQNYTHDStzoYWpJixeQhi_RorB7gMw=" alt="Menu Item 6">
+            <h3>D Resin Art</h3>
+            <p>Unique and beautiful art that will make your home livelier!</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let details = document.getElementById("storeDetails");
+            let button = document.getElementById("toggleBtn");
+
+            button.addEventListener("click", function () {
+                if (details.style.display === "none" || details.style.display === "") {
+                    details.style.display = "block"; 
+                    button.textContent = "Close"; 
+                } else {
+                    details.style.display = "none"; 
+                    button.textContent = "Get Started"; 
+                }
+            });
+        });
+    </script>
+</body>
+</html>

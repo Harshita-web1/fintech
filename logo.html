@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lxme Web UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #f9f7fc, #ffffff);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px 50px;
+            box-shadow: 0 4px 10px rgba(153, 102, 255, 0.2);
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #e91e63;
+            transform: translateX(-15px);
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .menu li a:hover {
+            color: #e91e63;
+        }
+        .app-icons img {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        /* Hero Section */
+        .hero-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        /* Main Section */
+        .main-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        /* Laptop Mockup */
+        .laptop-mockup {
+            width: 400px;
+            height: 250px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(153, 102, 255, 0.3);
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Inside Laptop - App Interface */
+        .app-interface {
+            width: 90%;
+            height: 85%;
+            background: url('https://via.placeholder.com/350x200') no-repeat center;
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        /* Circular Icons */
+        .feature {
+            position: absolute;
+            width: 80px;  /* Smaller icons */
+            height: 80px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(153, 102, 255, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Positioning Icons Closer to Laptop */
+        .feature img {
+            width: 35px;
+            margin-bottom: 3px;
+        }
+
+        .borrow { top: 10%; left: -100px; background: #a95ef7; color: white; }
+        .spend { top: 40%; left: -120px; background: #e57373; color: white; }
+        .save { top: 70%; left: -100px; background: #fbc02d; color: white; }
+        .discuss { top: 10%; right: -100px; background: #ff4081; color: white; }
+        .learn { top: 40%; right: -120px; background: #7e57c2; color: white; }
+        .plan { top: 70%; right: -100px; background: #42a5f5; color: white; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Lxme</div>
+        <ul class="menu">
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Financial Calculators</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <div class="app-icons">
+            <img src="https://cdn-icons-png.flaticon.com/128/732/732228.png" alt="App Store">
+            <img src="https://cdn-icons-png.flaticon.com/128/300/300218.png" alt="Play Store">
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-title">Top 9 things to do on the Lxme App!</div>
+
+    <!-- Main App Section -->
+    <div class="main-container">
+        <!-- Laptop Mockup -->
+        <div class="laptop-mockup">
+            <img src="https://i.pinimg.com/736x/dd/9b/49/dd9b49d39dac122687a885e248cd58e3.jpg" alt="">
+            <div class="app-interface"></div>
+        </div>
+
+        <!-- Feature Icons -->
+        <div class="feature borrow">
+            <img src="https://cdn-icons-png.flaticon.com/128/1043/1043454.png" alt="Borrow">
+            Borrow
+        </div>
+        <div class="feature spend">
+            <img src="https://cdn-icons-png.flaticon.com/128/2893/2893710.png" alt="Spend">
+            Spend
+        </div>
+        <div class="feature save">
+            <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="Save">
+            Save
+        </div>
+        <div class="feature discuss">
+            <img src="https://cdn-icons-png.flaticon.com/128/2893/2893765.png" alt="Discuss">
+            Discuss
+        </div>
+        <div class="feature learn">
+            <img src="https://cdn-icons-png.flaticon.com/128/2893/2893781.png" alt="Learn">
+            Learn
+        </div>
+        <div class="feature plan">
+            <img src="https://cdn-icons-png.flaticon.com/128/3135/3135724.png" alt="Plan">
+            Plan
+        </div>
+    </div>
+
+</body>
+</html>

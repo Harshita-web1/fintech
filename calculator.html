@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+       
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: #fff;
+        box-shadow: 0px 4px 10px #d1006e;
+        border-radius: 30px;
+        margin: 20px;
+}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e91e63;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 19px;
+            font-weight: bold;
+        }
+        .menu li a:hover {
+            color: #e91e63;
+        }
+        .app-icons img {
+            width: 30px;
+            margin-left: 10px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 0px;
+        font-size: 58px;
+        
+        font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+        color: purple;
+}
+        
+
+        /* Calculators Section */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .calculators {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .calculator-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 13px 34px rgba(153, 102, 255, 0.3);
+
+            width: 250px;
+            text-align: center;
+            margin: 10px;
+        }
+        .calculator-box img {
+            width: 80px;
+            height: 80px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            color: white;
+            background-color: #e91e63;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">GrihiniGrow</div>
+        <ul class="menu">
+            <li><a href="section1.html">Products</a></li>
+            <li><a href="calculator.html">Financial Calculators</a></li>
+            <li><a href="freelancing.html">Resources</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+        
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">Your Financial Planning Made Smarter</div>
+
+    <!-- Calculators Section -->
+    <div class="container">
+        <div class="calculators">
+            <div class="calculator-box">
+                <img src="https://lxme.in/wp-content/uploads/2025/02/image-57.jpg" alt="SIP Calculator">
+                <h3>Goal Calculator</i></h3>
+                <a href="goal_calculator.html" class="button">Calculate Now</a>
+            </div>
+            <div class="calculator-box">
+                <img src="https://lxme.in/wp-content/uploads/2024/06/Simple-Interest-Calculator.png" alt="Lumpsum Calculator">
+                <h3>Simple Interest Calculator</h3>
+                <a href="simpleinterest.html" class="button">Calculate Now</a>
+            </div>
+            <div class="calculator-box">
+                <img src="https://lxme.in/wp-content/uploads/2024/06/Compound-Interest-Calculator.png" alt="Salary Calculator">
+                <h3>Compound Interest Calculator</h3>
+                <a href="compund.html" class="button">Calculate Now</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

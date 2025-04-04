@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        canvas{
+            max-width: 250px;
+            max-height: 250px;
+            margin: 0 auto;
+        }
+        .invest-btn {
+            background-color: #e91e63;
+            color: rgb(240, 227, 227);
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .invest-btn:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Compound Interest Calculator</h2>
+    <p class="text-center text-muted">💡 Did you know, Compound Interest is the 8th miracle of the world?</p>
+
+    <div class="mb-3">
+        <label class="form-label">Amount Invested (₹)</label>
+        <input type="range" class="form-range" id="amountRange" min="100" max="10000000" step="100" value="15000" oninput="updateValues()">
+        <span id="amountValue">₹ 15,000</span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Rate of Interest (p.a.) (%)</label>
+        <input type="range" class="form-range" id="rateRange" min="1" max="30" step="0.1" value="12" oninput="updateValues()">
+        <span id="rateValue">12%</span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Time Period (Years)</label>
+        <input type="range" class="form-range" id="timeRange" min="1" max="30" step="1" value="5" oninput="updateValues()">
+        <span id="timeValue">5 Yr</span>
+    </div>
+
+    <button class="invest-btn w-100 mb-3" onclick="calculate()">Invest Now</button>
+
+    <h3 class="text-center">Total Value</h3>
+    <h2 class="text-center" id="totalValue">₹ 26,435</h2>
+
+    <canvas id="interestChart" width="900" height="900"></canvas>
+
+</div>
+
+<script>
+    function updateValues() {
+        document.getElementById('amountValue').textContent = "₹ " + parseInt(document.getElementById('amountRange').value).toLocaleString();
+        document.getElementById('rateValue').textContent = document.getElementById('rateRange').value + "%";
+        document.getElementById('timeValue').textContent = document.getElementById('timeRange').value + " Yr";
+        calculate();
+    }
+
+    function calculate() {
+        let P = parseInt(document.getElementById('amountRange').value);
+        let r = parseFloat(document.getElementById('rateRange').value) / 100;
+        let t = parseInt(document.getElementById('timeRange').value);
+
+        let A = P * Math.pow((1 + r), t);
+        let totalInterest = A - P;
+
+        document.getElementById('totalValue').textContent = "₹ " + Math.round(A).toLocaleString();
+
+        updateChart(P, totalInterest);
+    }
+
+    let chart;
+    function updateChart(amountInvested, totalInterest) {
+        if (chart) {
+            chart.destroy();
+        }
+        let ctx = document.getElementById('interestChart').getContext('2d');
+        chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Amount Invested', 'Total Interest'],
+                datasets: [{
+                    data: [amountInvested, totalInterest],
+                    backgroundColor: ['#fbc02d', '#e91e63']
+                }]
+            }
+        });
+    }
+
+    // Initialize values
+    calculate();
+</script>
+
+</body>
+</html>

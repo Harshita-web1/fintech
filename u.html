@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Job Categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="category" onmouseover="showSubcategories('web-it-software')">
+            <h2>Websites, IT & Software</h2>
+            <p>PHP, HTML, JavaScript, Software Architecture, WordPress...</p>
+        </div>
+        <div class="category" onmouseover="showSubcategories('writing-content')">
+            <h2>Writing & Content</h2>
+            <p>Content Writing, Article Writing, Copywriting, Ghostwriting...</p>
+        </div>
+        <div class="category" onmouseover="showSubcategories('ai-development')">
+            <h2>Artificial Intelligence</h2>
+            <p>AI Chatbot Development, ChatGPT AI Integration, LLMs...</p>
+        </div>
+        
+        <div id="subcategories">
+            <div id="web-it-software" class="subcategory">
+                <h3>Websites, IT & Software (12913)</h3>
+                <ul>
+                    <li>.NET (52)</li>
+                    <li>.NET Core (4)</li>
+                    <li>PHP (100)</li>
+                    <li>WordPress (80)</li>
+                </ul>
+            </div>
+            <div id="writing-content" class="subcategory">
+                <h3>Writing & Content</h3>
+                <ul>
+                    <li>Copywriting</li>
+                    <li>Article Writing</li>
+                    <li>Technical Writing</li>
+                </ul>
+            </div>
+            <div id="ai-development" class="subcategory">
+                <h3>Artificial Intelligence</h3>
+                <ul>
+                    <li>AI Chatbot</li>
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSubcategories(category) {
+            document.querySelectorAll('.subcategory').forEach(div => div.style.display = 'none');
+            document.getElementById(category).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
